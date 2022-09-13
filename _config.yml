@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Dandi Chen"
   avatar           : "headshot.jpg"
-  bio              :
-  location         : "Madison, WI"
+  bio              : "PhD student in Population Health"
+  location         :
   employer         : "University of Wisconsin-Madison"
   pubmed           :
   googlescholar    :
-  email            :
+  email            : "dandi.chen@wisc.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
@@ -109,7 +109,7 @@ author:
   stackoverflow    : # http://stackoverflow.com/users/123456/username
   steam            :
   tumblr           :
-  twitter          : 
+  twitter          :
   vine             :
   weibo            :
   xing             :
