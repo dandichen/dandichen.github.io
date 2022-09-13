@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "STAT 888 (Fall 2022)"
+title                    : "Dandi Chen"
 title_separator          : "-"
 name                     : &name "Dandi Chen"
 description              : &description "personal description"
@@ -80,7 +80,7 @@ analytics:
 
 # Site Author
 author:
-  name             : "Dandi Chen"
+  name             :
   avatar           : "headshot.jpg"
   bio              :
   location         : "Madison, WI"
