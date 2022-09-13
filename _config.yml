@@ -82,27 +82,27 @@ analytics:
 author:
   name             : "Dandi Chen"
   avatar           : "headshot.jpg"
-  bio              : "PhD student in Population Health"
+  bio              :
   location         :
   employer         : "University of Wisconsin-Madison"
   pubmed           :
   googlescholar    :
   email            : "dandi.chen@wisc.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : "https://sites.google.com/view/dandic/home"
   bitbucket        :
   codepen          :
   dribbble         :
   flickr           :
   facebook         :
   foursquare       :
-  github           :
+  github           : "https://github.com/dandichen/"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/dandic"
   orcid            :
   pinterest        :
   soundcloud       :
