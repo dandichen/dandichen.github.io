@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "STAT 888 (Fall 2022)"
+title                    : "STAT 888"
 title_separator          : "-"
 name                     : &name "Dandi Chen"
 description              : &description "personal description"
@@ -87,7 +87,7 @@ author:
   employer         :
   pubmed           :
   googlescholar    :
-  email            : "dandi.chen@wisc.edu"
+  email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              : "https://sites.google.com/view/dandic/home"
   bitbucket        :
