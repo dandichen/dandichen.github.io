@@ -83,13 +83,13 @@ author:
   name             :
   avatar           : "headshot.jpg"
   bio              :
-  location         : 
+  location         :
   employer         :
   pubmed           :
   googlescholar    :
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              : "https://sites.google.com/view/dandic/home"
+  uri              : 
   bitbucket        :
   codepen          :
   dribbble         :
