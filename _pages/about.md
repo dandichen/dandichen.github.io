@@ -14,4 +14,4 @@ I was trained in computer vision, machine learning and natural language processi
 
 I am interested in trustworthy machine learning in healthcare. I would like to know if causal inference can help better understand machine learning models when focusing on health services research and clinical problems. With causal inference embedded, these black-box models may become more interpretable and generalizable, rather than being limited to finding patterns in the data.
 
-macOS 12.6 M1
+macOS 12.6
