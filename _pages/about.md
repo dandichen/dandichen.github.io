@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-About Me
+
 ======
 I am a third-year PhD student in [Population Health](https://pophealth.wisc.edu/degree-programs/about-the-programs/population-health/) at [University of Wisconsin-Madison](https://www.wisc.edu/). My advisor is Dr. [Maureen Smith](https://pophealth.wisc.edu/staff/smith-maureen/). I explore the association between telehealth use and unplanned events during COVID-19 and multilevel factors that may improve colorectal cancer screening rates at rural and urban clinics in Wisconsin, by working closely with Dr. [Jessica Cao](https://pophealth.wisc.edu/staff/cao-jessica-ying/), Dr. [Jennifer Weiss](https://www.medicine.wisc.edu/people-search/people/staff/565/Weiss_Jennifer), and Dr. [Guanhua Chen](https://biostat.wiscweb.wisc.edu/staff/chen-guanhua/).
 
