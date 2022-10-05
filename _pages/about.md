@@ -18,19 +18,22 @@ I am interested in trustworthy machine learning in healthcare. I would like to k
 
 Stat 888
 ------
-Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades[1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2-3] to help maintain social distancing to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. [4]
+Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades [1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2-3] to help maintain social distancing to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. [4]
 
-However, there is limited evidence about the effects of telehealth on long-term patient outcomes. [5-6] Some people support telehealth due to its timely care access[7-8], while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care, resulting in worse outcomes. [9-10] Uncertainty and controversy have prevented policymakers and private entities, such as insurers, clinicians, and/or care organizations, from making permanent decisions about telemedicine as a public health emergency draws to a close. Uncertainty and debates have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth in post-pandemic future. [11-13]
+However, there is limited evidence about the effects of telehealth on long-term patient outcomes. [5-6] Some people support telehealth due to its timely care access [7-8], while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care, resulting in worse outcomes. [9-10] Uncertainty and debates have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth in the post-pandemic future. [11-13]
 
 This formally raises the question: compared to in-person visits, are telehealth visits beneficial in improving patient outcomes, such as fewer hospitalizations?
 
 
 **Model the Problem**
-Patient characteristics $$X$$, including sociodemographics and baseline health conditions.
+
+Patient characteristics $$X \in \mathbb{R}^d$$, a $$d$ real-valued vector, which $ including patients' sociodemographics and health conditions at baseline. Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (female/non-female), race/ethnicity(non-hispanic white/other), Medicaid enrollment (binary indicator), disability entitlement (binary indicator) and geographical residence (urban, suburban, large town, small town/isolated rural). The hierarchical condition categories (HCC) score and a binary indicator of having three or more chronic conditions serve as the descrption of patients' health conditions.
 
 Treatment effect $$A \in \{0, 1\}$$, where $$A = 1$$ for telehealth visit and $$A = 0$$ for in-person visit.
 
-Outcome $$Y$$, the number of hospitalizations within 30 days of the visit.
+Outcome $$Y$$, indicating the number of hospitalizations within 30 days of the visit.
+
+All of the above variables are observable.
 
 
 **Causal Effect**
