@@ -18,7 +18,7 @@ I am interested in trustworthy machine learning in healthcare. I would like to k
 
 Stat 888
 ------
-Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades[1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2] to help maintain social distancing to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. 
+Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades[1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2-3] to help maintain social distancing to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. [4]
 
 However, there is limited evidence about the effects of telehealth on long-term patient outcomes. Some people support telehealth due to its timely care access, while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care. Uncertainty and controversy have prevented policymakers and private entities, such as insurers, clinicians, and/or care organizations, from making permanent decisions about telemedicine as a public health emergency draws to a close. Uncertainty and controversy have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth when the public health emergency is coming to an end.
 
@@ -29,7 +29,11 @@ In other words, are telehealth visits beneficial to patients?
 
 [1] Jagarapu, Jawahar, and Rashmin C. Savani. "A brief history of telemedicine and the evolution of teleneonatology." In Seminars in Perinatology, vol. 45, no. 5, p. 151416. WB Saunders, 2021.
 
-[2] https://www.cdc.gov/mmwr/volumes/69/wr/mm6943a3.htm
+[2] [https://www.cdc.gov/mmwr/volumes/69/wr/mm6943a3.htm](https://www.cdc.gov/mmwr/volumes/69/wr/mm6943a3.htm)
+
+[3] [https://aspe.hhs.gov/sites/default/files/documents/a1d5d810fe3433e18b192be42dbf2351/medicare-telehealth-report.pdf](https://aspe.hhs.gov/sites/default/files/documents/a1d5d810fe3433e18b192be42dbf2351/medicare-telehealth-report.pdf)
+
+[4] [https://www.medicare.gov/coverage/telehealth](https://www.medicare.gov/coverage/telehealth)
 
 
 
