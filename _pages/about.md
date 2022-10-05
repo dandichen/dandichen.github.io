@@ -26,9 +26,11 @@ This formally raises the question: compared to in-person visits, are telehealth 
 
 
 **Model the Problem**
-Patient characteristics X, including sociodemographics and baseline health conditions.
-Treatment effect $$A \in {0, 1}$$, A = 1 for telehealth visit and A = 0 for in-person visit.
-Outcome Y, the number of hospitalizations within 30 days of the visit.
+Patient characteristics $$X$$, including sociodemographics and baseline health conditions.
+
+Treatment effect $$A \in \{0, 1\}$$, where $$A = 1$$ for telehealth visit and $$A = 0$$ for in-person visit.
+
+Outcome $$Y$$, the number of hospitalizations within 30 days of the visit.
 
 
 **Causal Effect**
