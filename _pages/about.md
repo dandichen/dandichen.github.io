@@ -17,7 +17,7 @@ I am interested in trustworthy machine learning in healthcare. I would like to k
 
 
 Stat 888
-======
+------
 Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades[1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2-3] to help maintain social distancing to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. [4]
 
 However, there is limited evidence about the effects of telehealth on long-term patient outcomes. [5-6] Some people support telehealth due to its timely care access[7-8], while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care, resulting in worse outcomes. [9-10] Uncertainty and controversy have prevented policymakers and private entities, such as insurers, clinicians, and/or care organizations, from making permanent decisions about telemedicine as a public health emergency draws to a close. Uncertainty and debates have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth in post-pandemic future. [11-13]
@@ -25,14 +25,16 @@ However, there is limited evidence about the effects of telehealth on long-term 
 This formally raises the question: compared to in-person visits, are telehealth visits beneficial in improving patient outcomes, such as fewer hospitalizations?
 
 
-Model the Problem
-------
+**Model the Problem**
+Patient characteristics X, including sociodemographics and baseline health conditions.
+Treatment effect $$A \in {0, 1}$$, A = 1 for telehealth visit and A = 0 for in-person visit.
+Outcome Y, the number of hospitalizations within 30 days of the visit.
 
-Causal Effect
-------
 
-Hypothses
-------
+**Causal Effect**
+
+
+**Hypothses**
 
 
 
