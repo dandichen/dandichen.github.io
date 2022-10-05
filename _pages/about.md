@@ -27,16 +27,18 @@ This formally raises the question: compared to in-person visits, are telehealth 
 
 **Model the Problem**
 
-Patient characteristics $$X \in \mathbb{R}^d$$, a $$d$$ real-valued vector, which including patients' sociodemographics and health conditions at baseline. Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (female/non-female), race/ethnicity(non-hispanic white/other), Medicaid enrollment (binary indicator), disability entitlement (binary indicator) and geographical residence (urban, suburban, large town, small town/isolated rural). The hierarchical condition categories (HCC) score and a binary indicator of having three or more chronic conditions serve as the descrption of patients' health conditions.
+Patient characteristics $$X \in R^d$$, a $$d$$ real-valued vector, which including patients' sociodemographics and health conditions at baseline. Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (female/non-female), race/ethnicity(non-hispanic white/other), Medicaid enrollment (binary indicator), disability entitlement (binary indicator) and geographical residence (urban, suburban, large town, small town/isolated rural). The hierarchical condition categories (HCC) score and a binary indicator of having three or more chronic conditions serve as the descrption of patients' health conditions.
 
 Treatment effect $$A \in \{0, 1\}$$, where $$A = 1$$ for telehealth visit and $$A = 0$$ for in-person visit.
 
-Outcome $$Y \in \mathbb{N}^0$$, a non-negative integer, indicating the number of hospitalizations within 30 days of the visit.
+Outcome $$Y \in N^0$$, a non-negative integer, indicating the number of hospitalizations within 30 days of the visit.
 
 
 **Causal Effect**
 
-There is an underlying assumption to this question: telehealth is available to these participants. However, not everyone has access to telehealth services.
+There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet.
+
+
 
 
 **Hypothses**
