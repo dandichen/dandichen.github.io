@@ -20,10 +20,12 @@ Stat 888
 ------
 Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades[1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2-3] to help maintain social distancing to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. [4]
 
-However, there is limited evidence about the effects of telehealth on long-term patient outcomes. Some people support telehealth due to its timely care access, while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care. Uncertainty and controversy have prevented policymakers and private entities, such as insurers, clinicians, and/or care organizations, from making permanent decisions about telemedicine as a public health emergency draws to a close. Uncertainty and controversy have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth when the public health emergency is coming to an end.
+However, there is limited evidence about the effects of telehealth on long-term patient outcomes. [5-6] Some people support telehealth due to its timely care access[7-8], while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care, resulting in worse outcomes. [9-10] Uncertainty and controversy have prevented policymakers and private entities, such as insurers, clinicians, and/or care organizations, from making permanent decisions about telemedicine as a public health emergency draws to a close. Uncertainty and debates have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth in post-pandemic future. [11-13]
 
 
 In other words, are telehealth visits beneficial to patients?
+
+
 
 **Reference**
 
@@ -35,5 +37,20 @@ In other words, are telehealth visits beneficial to patients?
 
 [4] [https://www.medicare.gov/coverage/telehealth](https://www.medicare.gov/coverage/telehealth)
 
+[5] Goldberg, Elizabeth M., Frances N. Jiménez, Kevin Chen, Natalie M. Davoodi, Melinda Li, Daniel H. Strauss, Maria Zou, Kate Guthrie, and Roland C. Merchant. "Telehealth was beneficial during COVID‐19 for older Americans: a qualitative study with physicians." Journal of the American Geriatrics Society 69, no. 11 (2021): 3034-3043.
 
+[6] [https://www.healthaffairs.org/do/10.1377/forefront.20211019.985495/](https://www.healthaffairs.org/do/10.1377/forefront.20211019.985495/)
 
+[7] Johnson, Pamela Jo, Neha Ghildayal, Andrew C. Ward, Bjorn C. Westgard, Lori L. Boland, and Jon S. Hokanson. "Disparities in potentially avoidable emergency department (ED) care: ED visits for ambulatory care sensitive conditions." Medical care (2012): 1020-1028.
+
+[8] Lee, Ivy, Carrie Kovarik, Trilokraj Tejasvi, Michelle Pizarro, and Jules B. Lipoff. "Telehealth: Helping your patients and practice survive and thrive during the COVID-19 crisis with rapid quality implementation." Journal of the American Academy of Dermatology 82, no. 5 (2020): 1213-1214.
+
+[9] Bavafa, Hessam, Lorin M. Hitt, and Christian Terwiesch. "The impact of e-visits on visit frequencies and patient health: Evidence from primary care." Management Science 64, no. 12 (2018): 5461-5480.
+
+[10] Li, Kathleen Y., Sophia Ng, Ziwei Zhu, Jeffrey S. McCullough, Keith E. Kocher, and Chad Ellimoottil. "Association Between Primary Care Practice Telehealth Use and Acute Care Visits for Ambulatory Care–Sensitive Conditions During COVID-19." JAMA network open 5, no. 3 (2022): e225484-e225484.
+
+[11] [https://www.commonwealthfund.org/publications/issue-briefs/2021/jun/states-actions-expand-telemedicine-access-covid-19](https://www.commonwealthfund.org/publications/issue-briefs/2021/jun/states-actions-expand-telemedicine-access-covid-19)
+
+[12] Shachar, Carmel, Jaclyn Engel, and Glyn Elwyn. "Implications for telehealth in a postpandemic future: regulatory and privacy issues." Jama 323, no. 23 (2020): 2375-2376.
+
+[13] Bashshur, Rashid L., Charles R. Doarn, Julio M. Frenk, Joseph C. Kvedar, Gary W. Shannon, and James O. Woolliscroft. "Beyond the COVID pandemic, telemedicine, and health care." Telemedicine and e-Health 26, no. 11 (2020): 1310-1313.
