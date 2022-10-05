@@ -41,7 +41,7 @@ Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (f
 There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet. Therefore, it is reasonable to define population average treatment effects $$E[Y(A = 1) - Y(A = 0) \mid S = 1]$$, where $$S \in \{0, 1\}$$ with $$S = 1$$ represents being sampled in this study.
 
 
-**Hypothses**
+**Hypotheses**
 
 - Exchangeability
 
