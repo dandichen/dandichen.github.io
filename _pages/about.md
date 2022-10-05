@@ -26,7 +26,9 @@ However, there is limited evidence about the effects of telehealth on long-term 
 In other words, are telehealth visits beneficial to patients?
 
 **Reference**
+
 [1] Jagarapu, Jawahar, and Rashmin C. Savani. "A brief history of telemedicine and the evolution of teleneonatology." In Seminars in Perinatology, vol. 45, no. 5, p. 151416. WB Saunders, 2021.
+
 [2] https://www.cdc.gov/mmwr/volumes/69/wr/mm6943a3.htm
 
 
