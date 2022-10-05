@@ -43,19 +43,19 @@ There is an underlying assumption to this question: sampled participants in the 
 
 **Hypothses**
 
-1. Exchangeability
+- Exchangeability
 
 Conditional exchangeability? Within strata (similar sociodemographics and baseline health conditions)
 
-1. SUTVA
-- Consistency: assumed, but may not true, due to baseline conditions, etc. Holds within strata
-- Treatment irrelevance: assume no difference within telehealth/in-person types
-- No interference: yes
-- Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
+- SUTVA
+  - Consistency: assumed, but may not true, due to baseline conditions, etc. Holds within strata
+  - Treatment irrelevance: assume no difference within telehealth/in-person types
+  - No interference: yes
+  - Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
 
-1. Positivity
+- Positivity
 
-yes
+yes - some use telehealth, some use in-person services
 
 
 **Reference**
