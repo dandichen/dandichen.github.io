@@ -42,9 +42,12 @@ There is an underlying assumption to this question: sampled participants in the 
 
 **Hypotheses**
 
-Individuals receiving treatment $$(A = 1)$$ or not $$(A = 0)$$ are expected to be exchangeable. In other words, treatment assignment should be independent from potential outcomes, i.e., $$Y(a) \| A $$ for $$a \in \{0, 1\}$$, to fulfill the exchangeability assumption. However, confounding variables such as patients' demographics and preference, as well as their pre-existing health conditions, may affect patient outcomes $$Y$$. Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed patients' characteristics such as age, gender, race/ethnicity and geographical residence. 
+Ideally, the directed acyclic graph (DAG) can be as simple as $$A -> Y <- X$$ since $$X$$ precedes $$A$$ and $$A$$ precedes $$Y$$, which indicates both $$X$$ and $$A$$ can affect $$Y$$ but pre-existing characteristics $$X$$ and the treatment $$A$$ cannot be affected by $$Y$$. This also assumes that individuals receiving treatment $$(A = 1)$$ or not $$(A = 0)$$ are expected to be exchangeable, i.e., $$Y(a) \| A $$ for $$a \in \{0, 1\}$$.
 
-It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make treated and untreated groups more comparable. 
+However, confounding variables such as patients' demographics and preferences on telehealth vs in-person services, as well as their pre-existing health conditions, may affect their treatment $$X$$. Then it adds a path from $$X$$ to $$A$$, implying that there will be two paths from $$X$$ to $$Y$$ in a single DAG: $$X \rightarrow A \rightarrow Y$$ and $$X \rightarrow Y$$ if assuming confounding variables are observed. Furthermore, if taking unobserved characteristics $$U \subseteq X$$ into consideration as well, then the DAG can contain two paths from $$U$$ to $$Y$$: $$U \rightarrow A \rightarrow Y$$ and $$U \rightarrow C \rightarrow Y$$ where $$C$$ stands for observed characteristics and $$C \subseteq X$$, because the effect of unobserved variables on the outcomes will be passed through to the observed variables.
+
+
+
 
 
 
