@@ -42,24 +42,11 @@ There is an underlying assumption to this question: sampled participants in the 
 
 **Hypotheses**
 
-Individuals receiving treatment $$(A = 1)$$ or not $$(A = 0)$$ are expected to be comparable. In other words, treatment assignment should be independent from potential outcomes, i.e., $$Y(a) \| A $$for $$a \in {0, 1}$$, to fulfill the exchangeability requirement. However, confounding variables such as patients’ demographics and preference, as well as their pre-existing health conditions, may affect patient outcomes $$Y$$. Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variables such as age, gender, race/ethnicity, geographical residence and health conditions. 
+Individuals receiving treatment $$(A = 1)$$ or not $$(A = 0)$$ are expected to be exchangeable. In other words, treatment assignment should be independent from potential outcomes, i.e., $$Y(a) \| A $$ for $$a \in \{0, 1\}$$, to fulfill the exchangeability assumption. However, confounding variables such as patients' demographics and preference, as well as their pre-existing health conditions, may affect patient outcomes $$Y$$. Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed patients' characteristics such as age, gender, race/ethnicity and geographical residence. 
 
 It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make treated and untreated groups more comparable. 
 
 
-- Exchangeability
-
-Conditional exchangeability? Within strata (similar sociodemographics and baseline health conditions)
-
-- SUTVA
-  - Consistency: assumed, but may not true, due to baseline conditions, etc. Holds within strata
-  - Treatment irrelevance: assume no difference within telehealth/in-person types
-  - No interference: yes
-  - Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
-
-- Positivity
-
-yes - some use telehealth, some use in-person services
 
 
 **Reference**
