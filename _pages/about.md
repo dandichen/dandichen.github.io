@@ -27,17 +27,17 @@ This formally raises the question: compared to in-person visits, are telehealth 
 
 **Model the Problem**
 
-In order to simplify the problem, three random variables are defined.
+In order to simplify the problem, three random variables are defined for each invidual in this study.
 - Treatment assignment $$A \in \{0, 1\}$$, where $$A = 1$$ indicates telehealth visits and $$A = 0$$ indicates in-person visits. Each individual is assumed to choose telehealth or in-person services independent of the choice of others.
 - Outcome $$Y \in N^0$$, a non-negative integer, indicating the number of hospitalizations within 30 days of the visit.
-- Patient characteristics $$X \in R^d$$, a $$d$$ real-valued vector, which including patients' sociodemographics and health conditions at baseline. 
+- Patient characteristics $$X \in R^d$$, a $$d$$ real-valued vector, including patients' sociodemographics and health conditions at baseline. 
 
-Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (female/non-female), race/ethnicity(non-hispanic white/other), Medicaid enrollment (binary indicator), disability entitlement (binary indicator) and geographical residence (urban, suburban, large town, small town/isolated rural). The hierarchical condition categories (HCC) score and a binary indicator of having three or more chronic conditions serve as the description of patients' health conditions.
+Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (female/non-female), race/ethnicity (non-hispanic white/other), Medicaid enrollment (binary indicator), disability entitlement (binary indicator) and geographical residence (urban, suburban, large town, small town/isolated rural). The hierarchical condition categories (HCC) score and a binary indicator of having three or more chronic conditions serve as the description of patients' health conditions.
 
 
 **Causal Effect**
 
-There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet. Therefore, it is reasonable to define population average treatment effects $$E[Y(A = 1) - Y(A = 0) \mid S = 1]$$ for this problem, where $$S \in \{0, 1\}$$ with $$S = 1$$ represents being sampled in this study.
+There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet. Therefore, it is reasonable to define population average treatment effects $$E[Y(A = 1) - Y(A = 0) \mid S = 1]$$ for this problem, where $$S \in \{0, 1\}$$ and $$S = 1$$ represents being sampled in this study.
 
 
 **Hypotheses**
