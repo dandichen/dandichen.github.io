@@ -20,7 +20,7 @@ Stat 888
 ------
 Telehealth has been gradually equipped to the U.S. healthcare system in the past few decades [1], while we noticed that COVID-19 has triggered rapid expansion of telehealth [2-3] to reduce the risk of infection. In February 2020, the Centers for Disease Control and Prevention (CDC) issued guidance advising individuals and healthcare providers in areas affected by the COVID-19 pandemic to practice social distancing practices, specifically recommending that healthcare facilities and providers offer clinical services virtually such as telehealth. In March 2020, Centers for Medicare & Medicaid Services (CMS) announced initial telehealth flexibilities for Medicare beneficiaries, allowing the same payment level for telehealth as for in-person visits. [4]
 
-However, there is limited evidence about the effects of telehealth on long-term patient outcomes. [5-6] Some people support telehealth due to its timely care access [7-8], while some aruge that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care, resulting in worse outcomes. [9-10] Uncertainty and debates have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth in the post-pandemic future. [11-13]
+However, there is limited evidence about the effects of telehealth on long-term patient outcomes. [5-6] Some people support telehealth due to its timely care access [7-8], while some argue that telehealth is not an adequate substitute for in-person visits, which can cause even more delayed or missed care, resulting in worse outcomes. [9-10] Uncertainty and debates have prevented the policymakers, insurers, healthcare providers and other entities to make permanent decisions on telehealth in the post-pandemic future. [11-13]
 
 This formally raises the question: compared to in-person visits, are telehealth visits beneficial in improving patient outcomes, such as fewer hospitalizations?
 
@@ -47,7 +47,22 @@ Ideally, the directed acyclic graph (DAG) can be as simple as $$A \rightarrow Y 
 However, confounding variables, such as patient demographics and health conditions at baseline, may affect their treatment assignment. Then it adds a path from $$X$$ to $$A$$, implying that there will be two paths from $$X$$ to $$Y$$ in a single DAG: $$X \rightarrow A \rightarrow Y$$ and $$X \rightarrow Y$$ if assuming confounding variables are observed. Furthermore, if taking unobserved characteristics $$U \subseteq X$$ into consideration as well, such as preferences for telehealth versus in-person services, then the DAG can contain two paths from $$U$$ to $$Y$$: $$U \rightarrow A \rightarrow Y$$ and $$U \rightarrow C \rightarrow Y$$, where the union of observed characteristics $$C \subseteq X$$ and unobserved characteristics $$U$$ is the characteristics $$X$$. In other words, the effects of unobserved variables on the outcomes can be passed through to the observed variables.
 
 
+**Assumptions**
 
+- Exchangeability
+Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption. Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variable such as age, gender, race/ethnicity and geographical residence. 
+
+It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make exposed and non-exposed cohorts more comparable in the risk of developing the outcomes. Since it could be difficult to complete the matching process with several characteristics, propensity score matching is more appropriate based on observed explanatory variables, although it requires large sample size and it cannot deal with unobserved variables. 
+
+
+- SUTVA
+  - Consistency: assumed, but may not true, due to baseline conditions, etc. Holds within strata
+  - Treatment irrelevance: assume no difference within telehealth/in-person types
+  - No interference: yes
+  - Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
+
+- Positivity
+Individuals in this study are expected to be free to choose from telehealth and in-person services in the study period.
 
 
 
