@@ -94,6 +94,8 @@ In addition, $$E[Y(a)] = E[E[Y(a) \mid C]]$$ due to the law of total expectation
 
 Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]] = E[E[Y \mid A = a, C]]$$. Thus, the identification is complete.
 
+Therefore, the causal effect 
+
 
 Reference
 ------
