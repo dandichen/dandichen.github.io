@@ -63,7 +63,7 @@ It is also feasible to conduct matching to reduce the bias due to the confoundin
 
 - Stable Unit Treatment Value Assumption (SUTVA)
 
-SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$ and it implies assumptions including consistency, treatment irrelevance, no interference and stochastic potential outcomes.
+SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$. It implies several assumptions, including consistency, treatment irrelevance, no interference and stochastic potential outcomes.
 
 Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$.
 
