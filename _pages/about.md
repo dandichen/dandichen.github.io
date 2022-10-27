@@ -25,7 +25,7 @@ However, there is limited evidence about the effects of telehealth on long-term 
 This formally raises the question: compared to in-person visits, are telehealth visits beneficial in improving patient outcomes, such as fewer hospitalizations?
 
 
-**Model the Problem**
+***Model the Problem***
 
 In order to simplify the problem, three random variables are defined for each invidual in this study.
 - Treatment assignment $$A \in \{0, 1\}$$, where $$A = 1$$ indicates telehealth visits and $$A = 0$$ indicates in-person visits. Each individual is assumed to choose telehealth or in-person services independent of the choice of others.
@@ -35,12 +35,12 @@ In order to simplify the problem, three random variables are defined for each in
 Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (female/non-female), race/ethnicity (non-hispanic white/other), Medicaid enrollment (binary indicator), disability entitlement (binary indicator) and geographical residence (urban, suburban, large town, small town/isolated rural). The hierarchical condition categories (HCC) score and a binary indicator of having three or more chronic conditions serve as the description of patients' health conditions.
 
 
-**Causal Effect**
+***Causal Effect***
 
 There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet. Therefore, it is reasonable to define population average treatment effects $$E[Y(A = 1) - Y(A = 0) \mid S = 1]$$ for this problem, where $$S \in \{0, 1\}$$ and $$S = 1$$ represents being sampled in this study.
 
 
-**Hypotheses**
+***Hypotheses***
 
 Ideally, the directed acyclic graph (DAG) can be as simple as $$A \rightarrow Y \leftarrow X$$ since $$X$$ precedes $$A$$ and $$A$$ precedes $$Y$$, indicating both $$X$$ and $$A$$ can affect $$Y$$ but pre-existing characteristics $$X$$ and the treatment $$A$$ cannot be affected by $$Y$$. This also assumes that individuals receiving treatment $$(A = 1)$$ or not $$(A = 0)$$ are expected to be exchangeable, i.e., potential outcomes are independent from the treatment assignment. 
 
@@ -52,11 +52,11 @@ The relationship between the variables is summarized by a DAG as follows.
 ![test image](images/DAG.png)
 
 
-**Assumptions**
+***Assumptions***
 
 - Exchangeability
 
-Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \perp\kern-5pt\perp A$$ for all $$a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed characteristics such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, $$A$$ and $$Y$$ is d-separated by $$C$$. Then we have $$Y(a) \perp\kern-5pt\perp A \mid C$$ according to global Markov property. In other words, assumption of conditional exchangeability within strata is satisfied. 
+Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \perp\kern-5pt\perp A$$ for all $$a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed characteristics such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, $$A$$ and $$Y$$ is d-separated by $$C$$. Then we have $$Y(a) \perp\kern-5pt\perp A \mid C$$ according to global Markov property. In other words, the assumption of conditional exchangeability within strata is satisfied. 
 
 It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make exposed and non-exposed cohorts more comparable in the risk of developing the outcomes. Since it could be difficult to complete the matching process with several characteristics, propensity score matching is more appropriate based on observed explanatory variables, although it requires large sample size and it cannot deal with unobserved variables. 
 
@@ -79,12 +79,12 @@ The assumption of stochastic potential outcomes is not a concern here since numb
 Individuals in this study were free to choose between telehealth and in-person services at each visit. Therefore, positivity is satisfied as $$P(A = a) \in (0, 1)$$ for all $$a \in A$$.
 
 
-**Identification**
+***Identification***
 
 Under the above assumptions, d-separation is used to identify $$E[Y(a)]$$.
 
 
-**Reference**
+***Reference***
 
 [1] Jagarapu, Jawahar, and Rashmin C. Savani. "A brief history of telemedicine and the evolution of teleneonatology." In Seminars in Perinatology, vol. 45, no. 5, p. 151416. WB Saunders, 2021.
 
