@@ -49,7 +49,7 @@ However, confounding variables, such as patient demographics and health conditio
 In practice, it seems reasonable to consider that $$U$$ and $$C$$ can influence each other. For example, preference for telehealth versus in-person services may influence the geographic residence of participants, as those who prefer telehealth visits may tend to live in places with stable Internet access. However, some rural areas may have limited access to high-speed Internet. Meanwhile, rural residents may have less access to healthcare services, especially specialty care. [14] Telehealth is encouraged to overcome the geographic barriers faced by rural communities, which may influence people's preference for telehealth or in-person at the time of visit. For simplicity of modeling, only the path from $$C$$ to $$U$$ is kept in the DAG and this raises an assumption to ignore the effect from $$U$$ to $$C$$. Then the path $$U \rightarrow A \rightarrow Y$$ is updated to $$U \leftarrow C \rightarrow A \rightarrow Y$$. 
 
 The relationship between the variables is summarized by a DAG as follows
-![test image](images/DAG.pdf)
+![test image](images/DAG.png)
 
 
 **Assumptions**
