@@ -47,9 +47,9 @@ Hypotheses
 
 Ideally, the directed acyclic graph (DAG) can be as simple as $$A \rightarrow Y \leftarrow X$$ since $$X$$ precedes $$A$$ and $$A$$ precedes $$Y$$, indicating both $$X$$ and $$A$$ can affect $$Y$$ but pre-existing characteristics $$X$$ and the treatment $$A$$ cannot be affected by $$Y$$. This also assumes that individuals receiving treatment $$(A = 1)$$ or not $$(A = 0)$$ are expected to be exchangeable, i.e., potential outcomes are independent from the treatment assignment. 
 
-However, confounding variables, such as patient demographics and health conditions at baseline, may affect their treatment assignment. Then it adds a path from $$X$$ to $$A$$, implying that there will be two paths from $$X$$ to $$Y$$ in a single DAG: $$X \rightarrow A \rightarrow Y$$ and $$X \rightarrow Y$$ if assuming confounding variables are observed. Furthermore, if taking unobserved characteristics $$U \subseteq X$$ into consideration as well, such as preferences for telehealth versus in-person services, then the DAG can contain two paths from $$U$$ to $$Y$$: $$U \rightarrow Y$$ and $$U \rightarrow A \rightarrow Y$$, where $$C$$ denotes observed characteristics and $$X = C \cup U$$. 
+However, confounding variables, such as patient demographics and health conditions at baseline, may affect their treatment assignment. Then it adds a path from $$X$$ to $$A$$, implying that there are two paths from $$X$$ to $$Y$$ in a single DAG: $$X \rightarrow A \rightarrow Y$$ and $$X \rightarrow Y$$ if assuming confounding variables are observed. Furthermore, if taking unobserved characteristics $$U \subseteq X$$ into consideration as well, such as preferences for telehealth versus in-person services, then the DAG can contain two paths from $$U$$ to $$Y$$: $$U \rightarrow Y$$ and $$U \rightarrow A \rightarrow Y$$.
 
-In practice, it seems reasonable to consider that $$U$$ and $$C$$ can influence each other. For example, preference for telehealth versus in-person services may influence the geographic residence of participants, as those who prefer telehealth visits may tend to live in places with stable Internet access. However, some rural areas may have limited access to high-speed Internet. Meanwhile, rural residents may have less access to healthcare services, especially specialty care. [14] Telehealth is encouraged to overcome the geographic barriers faced by rural communities, which may influence people's preference for telehealth or in-person at the time of visit. For simplicity of modeling, only the path from $$C$$ to $$U$$ is kept in the DAG and this raises an assumption to ignore the effect from $$U$$ to $$C$$. Then the path $$U \rightarrow A \rightarrow Y$$ is updated to $$U \leftarrow C \rightarrow A \rightarrow Y$$. 
+In practice, it seems reasonable to consider that unobserved characteristics $$U$$ and observed characteristics $$C$$ can influence each other, where $$X = C \cup U$$. For example, preference for telehealth versus in-person services may influence the geographic residence of participants, as those who prefer telehealth visits may tend to live in places with stable Internet access. However, some rural areas may have limited access to high-speed Internet. Meanwhile, rural residents may have less access to healthcare services, especially specialty care. [14] Telehealth is encouraged to overcome the geographic barriers faced by rural communities, which may influence people's preference for telehealth or in-person at the time of visit. For simplicity of modeling, only the path from $$C$$ to $$U$$ is kept in the DAG and this raises an assumption to ignore the effect from $$U$$ to $$C$$. Then the path $$U \rightarrow A \rightarrow Y$$ is updated to $$U \leftarrow C \rightarrow A \rightarrow Y$$. 
 
 The relationship between the variables is summarized by a DAG as follows.
 ![test image](images/DAG.png)
@@ -71,7 +71,7 @@ SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$. It implies several a
 
 Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$.
 
-Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio + video interactive, audio + video real-time interactive services are all considered the same. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
+Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio + video interactive, audio + video real-time interactive services are all considered telehealth visits. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
 
 The assumption of no interference is satisfied. Patients are treated independently through telehealth or in-person visits and their potential outcomes are not expected to be affected by other individuals' assignment to the intervention.  
 
@@ -86,7 +86,13 @@ Individuals in this study were free to choose between telehealth and in-person s
 Identification
 ------
 
-Under the above assumptions, d-separation is used to identify $$E[Y(a)]$$.
+As shown in the DAG above, $$A$$ and $$Y$$ are d-separated by $$C$$, then we have $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$ since $$Y(a) \perp\kern-5pt\perp A \mid C$$.
+
+Using the consistency assumption yields $$Y = Y(a)$$, so $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$ = E[Y(a) \mid C] = E[Y \mid A = a, C]$.
+
+In addition, $$E[Y(a)] = E[E[Y(a) \mid C]]$$ due to the law of total expectation. 
+
+Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]] = E[E[Y \mid A = a, C]]$$. Thus, the identification is complete.
 
 
 Reference
