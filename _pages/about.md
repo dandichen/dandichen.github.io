@@ -56,17 +56,19 @@ The relationship between the variables is summarized by a DAG as follows.
 
 - Exchangeability
 
-Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \perp\kern-5pt\perp A$$ for all $$a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variables such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, A and Y is d-separated by C. Then we have $$Y(a) \perp\kern-5pt\perp A \mid C$$ according to global Markov property. This confirms that the assumption of conditional exchangeability within strata as a modification of exchangeability is satisfied. 
+Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \perp\kern-5pt\perp A$$ for all $$a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed characteristics such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, $$A$$ and $$Y$$ is d-separated by $$C$$. Then we have $$Y(a) \perp\kern-5pt\perp A \mid C$$ according to global Markov property. In other words, assumption of conditional exchangeability within strata is satisfied. 
 
 It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make exposed and non-exposed cohorts more comparable in the risk of developing the outcomes. Since it could be difficult to complete the matching process with several characteristics, propensity score matching is more appropriate based on observed explanatory variables, although it requires large sample size and it cannot deal with unobserved variables. 
 
 
-- SUTVA
+- Stable Unit Treatment Value Assumption (SUTVA)
 
 SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$.
 
   - Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$.
-  - Treatment irrelevance: assume no difference within telehealth/in-person types
+
+  - Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio + video interactive, audio + video real-time interactive services are all considered the same. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
+
   - No interference: yes
   - Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
 
