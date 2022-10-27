@@ -56,16 +56,16 @@ The relationship between the variables is summarized by a DAG as follows.
 
 - Exchangeability
 
-Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \rlap A \forall a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variables such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, A and Y is d-separated by C. Then we have $$Y(a) \rlap A | C$$ according to global Markov property. This confirms that the assumption of conditional exchangeability within strata as a modification of exchangeability is satisfied. 
-
-
-
+Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \rlap A$$ for all $$a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variables such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, A and Y is d-separated by C. Then we have $$Y(a) \rlap A | C$$ according to global Markov property. This confirms that the assumption of conditional exchangeability within strata as a modification of exchangeability is satisfied. 
 
 It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make exposed and non-exposed cohorts more comparable in the risk of developing the outcomes. Since it could be difficult to complete the matching process with several characteristics, propensity score matching is more appropriate based on observed explanatory variables, although it requires large sample size and it cannot deal with unobserved variables. 
 
 
 - SUTVA
-  - Consistency: assumed, but may not true, due to baseline conditions, etc. Holds within strata
+
+SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$.
+
+  - Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. In other words, it appears better to assume consistency within strata while strata is defined by observed characteristics $$C$$.
   - Treatment irrelevance: assume no difference within telehealth/in-person types
   - No interference: yes
   - Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
