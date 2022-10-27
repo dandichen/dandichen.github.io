@@ -65,13 +65,13 @@ It is also feasible to conduct matching to reduce the bias due to the confoundin
 
 SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$.
 
-    - Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$.
+  + Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$.
 
-    - Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio + video interactive, audio + video real-time interactive services are all considered the same. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
+  + Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio + video interactive, audio + video real-time interactive services are all considered the same. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
 
-    - The assumption of no interference is satisfied. Patients are treated independently through telehealth or in-person visits and their potential outcomes are not expected to be affected by other individuals' assignment to the intervention.  
+  + The assumption of no interference is satisfied. Patients are treated independently through telehealth or in-person visits and their potential outcomes are not expected to be affected by other individuals' assignment to the intervention.  
 
-    - Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
+  + Stochastic potential outcomes: assume this is a one-time measure for one telehealth/in-person visits
 
 - Positivity
 
