@@ -56,7 +56,10 @@ The relationship between the variables is summarized by a DAG as follows.
 
 - Exchangeability
 
-Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \rlap A \forall A$$ . Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variable such as age, gender, race/ethnicity and geographical residence. 
+Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \rlap A \forall a \in A$$. However, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variables such as age, gender, race/ethnicity and geographical residence. As shown in the DAG, A and Y is d-separated by C. Then we have $$Y(a) \rlap A | C$$ according to global Markov property. This confirms that the assumption of conditional exchangeability within strata as a modification of exchangeability is satisfied. 
+
+
+
 
 It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make exposed and non-exposed cohorts more comparable in the risk of developing the outcomes. Since it could be difficult to complete the matching process with several characteristics, propensity score matching is more appropriate based on observed explanatory variables, although it requires large sample size and it cannot deal with unobserved variables. 
 
