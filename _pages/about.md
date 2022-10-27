@@ -81,6 +81,8 @@ Individuals in this study were free to choose between telehealth and in-person s
 
 **Identification**
 
+Under the above assumptions, d-separation is used to identify $$E[Y(a)]$$.
+
 
 **Reference**
 
