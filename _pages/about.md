@@ -48,7 +48,7 @@ However, confounding variables, such as patient demographics and health conditio
 
 In practice, it seems reasonable to consider that $$U$$ and $$C$$ can influence each other. For example, preference for telehealth versus in-person services may influence the geographic residence of participants, as those who prefer telehealth visits may tend to live in places with stable Internet access. However, some rural areas may have limited access to high-speed Internet. Meanwhile, rural residents may have less access to healthcare services, especially specialty care. [14] Telehealth is encouraged to overcome the geographic barriers faced by rural communities, which may influence people's preference for telehealth or in-person at the time of visit. For simplicity of modeling, only the path from $$C$$ to $$U$$ is kept in the DAG and this raises an assumption to ignore the effect from $$U$$ to $$C$$. Then the path $$U \rightarrow A \rightarrow Y$$ is updated to $$U \leftarrow C \rightarrow A \rightarrow Y$$. 
 
-The relationship between the variables is summarized by a DAG as follows
+The relationship between the variables is summarized by a DAG as follows.
 ![test image](images/DAG.png)
 
 
@@ -56,7 +56,7 @@ The relationship between the variables is summarized by a DAG as follows
 
 - Exchangeability
 
-Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption. Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variable such as age, gender, race/ethnicity and geographical residence. 
+Treatment assignment should be independent from potential outcomes to fulfill the exchangeability assumption, i.e., $$Y(a) \rlap A \forall A$$ . Therefore, it might be reasonable to assume conditional exchangeability within strata instead, while strata is supposed to be defined on those observed variable such as age, gender, race/ethnicity and geographical residence. 
 
 It is also feasible to conduct matching to reduce the bias due to the confounding variables, to make exposed and non-exposed cohorts more comparable in the risk of developing the outcomes. Since it could be difficult to complete the matching process with several characteristics, propensity score matching is more appropriate based on observed explanatory variables, although it requires large sample size and it cannot deal with unobserved variables. 
 
