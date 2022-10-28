@@ -88,11 +88,11 @@ Identification
 
 As shown in the DAG above, $$A$$ and $$Y$$ are d-separated by $$C$$. Then we have $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$ since $$Y(a) \perp\kern-5pt\perp A \mid C$$.
 
-The consistency assumption yields $$Y = Y(a)$$. Thus, $$E[Y(a) \mid A = a, C] = E[Y \mid A = a, C]$$.
+The consistency assumption yields $$Y = Y(a)$$. So, $$E[Y(a) \mid A = a, C] = E[Y \mid A = a, C]$$.
 
 In addition, $$E[Y(a)] = E[E[Y(a) \mid C]]$$ due to the law of total expectation. 
 
-Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]] = E[E[Y \mid A = a, C]]$$. Hence, the identification is complete.
+Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]]$$ $$ = E[E[Y \mid A = a, C]]$$. Hence, the identification is complete.
 
 The proof affrims that appropriate $$A$$, $$Y$$ and $$C$$ are needed to identify the causal effect of interest, under a series of assumptions mentioned earlier. If each individual in the target population is assumed to be equally likely of being sampled in this study, then the defined population average treatment effect $$E[Y(A = 1) - Y(A = 0) \mid S = 1] = $$ $$E[Y(A = 1) - Y(A = 0)] = E[Y(A = 1)] - E[Y(A = 0)] = E[E[Y \mid A = 1, C]] $$ $$- E[E[Y \mid A = 0, C]]$$ because of the linearity of expectation. 
 
