@@ -88,13 +88,13 @@ Identification
 
 As shown in the DAG above, $$A$$ and $$Y$$ are d-separated by $$C$$. Then we have $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$ since $$Y(a) \perp\kern-5pt\perp A \mid C$$.
 
-The consistency assumption yields $$Y = Y(a)$$. Hence, $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$.
+The consistency assumption yields $$Y = Y(a)$$. Thus, $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$.
 
 In addition, $$E[Y(a)] = E[E[Y(a) \mid C]]$$ due to the law of total expectation. 
 
-Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]] = E[E[Y \mid A = a, C]]$$. Thus, the identification is complete.
+Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]] = E[E[Y \mid A = a, C]]$$. Hence, the identification is complete.
 
-The proof affrims that appropriate $$A$$, $$Y$$ and $$C$$ are needed to identify the causal effect of interest, under a series of assumptions mentioned earlier. It goes without saying which variables are expected to be aggregated to the observed characteristics $$C$$ deserves further discussion given real data. Particularly, access to complete patient-level health care utilization on the basis of electronic health records (EHRs) may be limited. Health insurance claims can act as a supplementary to EHRs [15] while their comprehensive and timely access could be a challenge for researchers. Moreover, 
+The proof affrims that appropriate $$A$$, $$Y$$ and $$C$$ are needed to identify the causal effect of interest, under a series of assumptions mentioned earlier. It goes without saying which variables are expected to be aggregated to the observed characteristics $$C$$ deserves further discussion given real data. Particularly, access to complete patient-level health care utilization on the basis of electronic health records (EHRs) may be limited. Health insurance claims can act as a supplementary to EHRs [15] while their comprehensive and timely access could be a challenge for researchers.
 
 
 Reference
