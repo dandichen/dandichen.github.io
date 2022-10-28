@@ -71,7 +71,7 @@ SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$. It implies several a
 
 Consistency is assumed as $$Y = Y(a)$$. In practice, those with more chronic conditions at baseline may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$, or to introduce additional unobserved confounding variables instead. 
 
-Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio and video interactive, audio and video real-time interactive services are all considered telehealth visits. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
+Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio and video interactive, audio and video real-time interactive services are all considered telehealth visits. A similar idea applies to in-person visits. This can also be treated as a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
 
 The assumption of no interference is satisfied. Patients are treated independently through telehealth or in-person visits and their potential outcomes are not expected to be affected by other individuals' assignment to the intervention.  
 
