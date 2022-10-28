@@ -39,7 +39,7 @@ Sociodemographics contain age group (65-74 years old, 75-85, and 86+), gender (f
 Causal Effect
 ------
 
-There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet. Therefore, it is reasonable to define population average treatment effects $$E[Y(A = 1) - Y(A = 0) \mid S = 1]$$ for this problem, where $$S \in \{0, 1\}$$ and $$S = 1$$ represents being sampled in this study.
+There is an underlying assumption to this question: sampled participants in the study are able to access telehealth services. However, telehealth is not available to everyone, such as those who do not have access to the Internet. Therefore, it is reasonable to define population average treatment effect $$E[Y(A = 1) - Y(A = 0) \mid S = 1]$$ for this problem, where $$S \in \{0, 1\}$$ and $$S = 1$$ represents being sampled in this study.
 
 
 Hypotheses
@@ -86,15 +86,15 @@ Individuals in this study were free to choose between telehealth and in-person s
 Identification
 ------
 
-As shown in the DAG above, $$A$$ and $$Y$$ are d-separated by $$C$$, then we have $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$ since $$Y(a) \perp\kern-5pt\perp A \mid C$$.
+As shown in the DAG above, $$A$$ and $$Y$$ are d-separated by $$C$$. Then we have $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$ since $$Y(a) \perp\kern-5pt\perp A \mid C$$.
 
-Using the consistency assumption yields $$Y = Y(a)$$, so $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$ = E[Y(a) \mid C] = E[Y \mid A = a, C]$.
+The consistency assumption yields $$Y = Y(a)$$. Hence, $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$.
 
 In addition, $$E[Y(a)] = E[E[Y(a) \mid C]]$$ due to the law of total expectation. 
 
 Combining the three expressions, $$E[Y(a)] = E[E[Y(a) \mid C]] = E[E[Y(a) \mid A = a, C]] = E[E[Y \mid A = a, C]]$$. Thus, the identification is complete.
 
-Therefore, the causal effect 
+The proof affrims that appropriate $$A$$, $$Y$$ and $$C$$ are needed to identify the causal effect of interest, under a series of assumptions mentioned earlier. It goes without saying which variables are expected to be aggregated to the observed characteristics $$C$$ deserves further discussion given real data. Particularly, access to complete patient-level health care utilization on the basis of electronic health records (EHRs) may be limited. Health insurance claims can act as a supplementary to EHRs [15] while their comprehensive and timely access could be a challenge for researchers. Moreover, 
 
 
 Reference
@@ -127,3 +127,5 @@ Reference
 [13] Bashshur, Rashid L., Charles R. Doarn, Julio M. Frenk, Joseph C. Kvedar, Gary W. Shannon, and James O. Woolliscroft. "Beyond the COVID pandemic, telemedicine, and health care." Telemedicine and e-Health 26, no. 11 (2020): 1310-1313.
 
 [14] Mueller, J. Tom, Kathryn McConnell, Paul Berne Burow, Katie Pofahl, Alexis A. Merdjanoff, and Justin Farrell. "Impacts of the COVID-19 pandemic on rural America." Proceedings of the National Academy of Sciences 118, no. 1 (2021): 2019378118.
+
+[15] Smith, Maureen A., Mary S. Vaughan-Sarrazin, Menggang Yu, Xinyi Wang, Peter A. Nordby, Christine Vogeli, Jonathan Jaffery, and Joshua P. Metlay. "The importance of health insurance claims data in creating learning health systems: evaluating care for high-need high-cost patients using the National Patient-Centered Clinical Research Network (PCORNet)." Journal of the American Medical Informatics Association 26, no. 11 (2019): 1305-1313.
