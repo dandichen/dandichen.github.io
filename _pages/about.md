@@ -71,7 +71,7 @@ SUTVA requires well-defined mapping from $$a$$ to $$Y(a)$$. It implies several a
 
 Consistency is assumed as $$Y = Y(a)$$, while it may not be true due to various baseline health conditions. For example, those with more chronic conditions may tend to have more hospitalizations than those are healthier, although both groups receive the same treatment. Therefore, it seems better to assume consistency within strata, while strata is defined by the observed characteristics $$C$$.
 
-Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio + video interactive, audio + video real-time interactive services are all considered telehealth visits. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
+Treatment irrelevance is assumed, so this study does not distinguish between subtypes in telehealth and in-person visits. For instances, audio, audio and video interactive, audio and video real-time interactive services are all considered telehealth visits. A similar idea applies to in-person visits. This is actually a limitation of the data, since all telehealth visits are coded the same. Therefore, it is not possible to distinguish their subtypes from the collected data.
 
 The assumption of no interference is satisfied. Patients are treated independently through telehealth or in-person visits and their potential outcomes are not expected to be affected by other individuals' assignment to the intervention.  
 
@@ -88,7 +88,7 @@ Identification
 
 As shown in the DAG above, $$A$$ and $$Y$$ are d-separated by $$C$$. Then we have $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$ since $$Y(a) \perp\kern-5pt\perp A \mid C$$.
 
-The consistency assumption yields $$Y = Y(a)$$. Thus, $$E[Y(a) \mid C] = E[Y(a) \mid A = a, C]$$.
+The consistency assumption yields $$Y = Y(a)$$. Thus, $$E[Y(a) \mid A = a, C] = E[Y \mid A = a, C]$$.
 
 In addition, $$E[Y(a)] = E[E[Y(a) \mid C]]$$ due to the law of total expectation. 
 
