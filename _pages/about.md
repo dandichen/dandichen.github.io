@@ -80,7 +80,7 @@ The assumption of stochastic potential outcomes is not a concern here since numb
 
 - **Positivity**
 
-Individuals in this study are free to choose between telehealth and in-person services at each visit. Therefore, positivity is satisfied as $$P(A = a \mid C = c) \in (0, 1)$$ for all $$a \in A$$.
+Individuals in this study are free to choose between telehealth and in-person services at each visit. Therefore, positivity is satisfied as $$P(A = a \mid C) \in (0, 1)$$ for all $$a \in A$$.
 
 
 Identification
