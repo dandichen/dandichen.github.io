@@ -123,7 +123,7 @@ Variables are exactly the same as described in the Model the Problem section.
 Discussion
 ------
 
-The IPW estimate of ATE is 0.044128. I also tried augmented inverse probability weighting (AIPW) and its estimate of ATE is 0.047478.
+The IPW estimate of ATE is 0.044128. I also tried augmented inverse probability weighting (AIPW) and its estimate of ATE is 0.047478. We have not seen a big difference between two ATEs although AIPW is doubly robust by combining IPW and outcome regression. As noted in class, both IPW and AIPW rely on observed variables to create propensity score to balance between the treated and untreated groups. However, 
 
 
 Reference
