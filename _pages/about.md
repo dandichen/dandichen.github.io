@@ -114,7 +114,7 @@ Dataset
 
 This study focuses on non-COVID outpatient care in primary care settings among Medicare beneficiaries served by an Accountable Care Organization (ACO) in southern Wisconsin. 3941 patients are included in the dataset. For simplicity, only their first visit after April 1, 2020 is included, for a total of 2325 telehealth visits and 1616 in-person visits as assigned treatment. 
 
-The number of hospitalizations within 30 days of this visit is counted as the outcome for each patient. 1375 patients did have follow-up hospitalizations within 30 days of the visit, while 1225 patients had more than two follow-up hospitalizations within 30 days. Please see the following table for more details.
+The number of hospitalizations within 30 days of this visit is counted as the outcome for each patient. 1375 patients did have follow-up hospitalizations within 30 days of the visit, while 1225 patients had more than two follow-up hospitalizations within 30 days. Please see the table below for details.
 ![test image](images/table.png)
 
 Variables are exactly the same as described in the Model the Problem section.
@@ -123,7 +123,11 @@ Variables are exactly the same as described in the Model the Problem section.
 Discussion
 ------
 
-The IPW estimate of ATE is 0.044128. I also tried augmented inverse probability weighting (AIPW) and its estimate of ATE is 0.047478. We have not seen a big difference between ATEs estimated by two approaches although AIPW is doubly robust by combining IPW and outcome regression. As noted in class, both IPW and AIPW rely on observed variables to create propensity score to balance between the treated and untreated groups. 
+The IPW estimate of ATE is 0.044128 in this dataset. However, it can introduce bias if the estimation of propensity score is not perfect since $$E\left[E_N\left[\frac{1_{A = a}Y}{\hat{P}(A = a \mid X)}\right]\right] = E[Y(a)] + E\left[\E[Y(a) \mid X]\frac{P(A = a \mid X)-\hat{P}(A = a \mid X)}{\hat{P}(A = a \mid X)}\right]$$.
+
+Therefore, I also tried augmented inverse probability weighting (AIPW) as it is doubly robust by combining IPW and outcome regression. The AIPW estimate of ATE is 0.047478, which is not much different from the IPW estimate.
+
+As noted in class, both IPW and AIPW rely on observed variables to create propensity score to balance between the treated and untreated groups. However, unobserved variables may also affect the results, as described in the Hypotheses section. Therefore, additional methods to address unmeasuresd confounding variables are expected for accurate estimands. 
 
 
 Reference
