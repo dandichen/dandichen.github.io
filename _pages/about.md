@@ -116,7 +116,7 @@ This study focuses on non-COVID outpatient care in primary care settings among M
 
 The number of hospitalizations within 30 days of this visit is counted as the outcome for each patient. 1375 patients did have follow-up hospitalizations within 30 days of the visit, while 1225 patients had more than two follow-up hospitalizations within 30 days. Please see the following table for more details.
 
-Variables are exactly the same as described in the $$\textit{\textbf{Model the Problem}}$$ section.
+Variables are exactly the same as described in the $$\textit{Model the Problem}$$ section.
 
 
 Discussion
