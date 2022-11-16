@@ -99,6 +99,16 @@ The proof affrims that appropriate $$A$$, $$Y$$ and $$C$$ are needed to identify
 It goes without saying that which variables are expected to be aggregated to the observed characteristics $$C$$ deserve further discussion given real data. Particularly, access to complete patient-level health care utilization based on electronic health records (EHRs) may be limited. Health insurance claims can act as supplement to EHRs [15] while their comprehensive and timely access may be a challenge for researchers. Therefore, two different sets of $$C$$ and $$U$$ can be defined depending on the availability of claims data: treat sociodemographics as observed variables and all health-related factors as unobserved variables if claims are not available; or treat sociodemographics and baseline care utilization as observed and other variables, such as preferences for telehealth versus in-person visits, as unobserved if claims are available. While both versions answer the research question above, the former effectively becomes a social inequality question, while the latter retains both sociodemographic and health-related factors to explore the causal relationship between treatment and outcome.
 
 
+Estimation
+------
+
+I use inverse probability weighting for estimation. It contains following steps:
+1. Load data and remove missing values;
+2. Estimate propensity score using logistic regression;
+3. Compute denominator for IPW weights;
+4. Compute IPW estimator for those with treatment = 1 and treatment = 0, respectively;
+5. Compute the difference to get IPW estimate of ATE.
+
 Reference
 ------
 
