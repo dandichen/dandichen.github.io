@@ -112,6 +112,7 @@ I use inverse probability weighting (IPW) for estimation. It includes the follow
 Dataset
 ------
 
+This study focuses on non-COVID outpatient care in primary care settings among Medicare beneficiaries served by an Accountable Care Organization (ACO) in southern Wisconsin. 3941 patients are included in the dataset. For simplicity, only their first visit after April 1, 2020 is included, for a total of 2325 telehealth visits and 1616 in-person visits, acting as the assigned treatment. 
 
 
 Discussion
