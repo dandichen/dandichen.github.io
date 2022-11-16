@@ -105,8 +105,18 @@ Estimation
 I use inverse probability weighting (IPW) for estimation. It includes the following steps:
 1. Load data and remove missing values;
 2. Fit a logistic regression model to explain the treatment $$A$$ as a function of all observed patient characteristics $$C$$. Then its predictions through this fitted logistic regression is the estimated propensity score $$\hat{e}(C)$$;
-4. Compute IPW estimators for those with $$A = 1$$ and $$A = 0$$ according to $$E[Y(1)] \approx E_N[\frac{AY}{\hat{e}(C)}]$$ and $$E[Y(0)] \approx E_N[\frac{(1 - A)Y}{1 - \hat{e}(C)}]$$, respectively;
+4. Compute IPW estimators for those with $$A = 1$$ and $$A = 0$$ according to $$E[Y(1)] \approx E_N\left[\frac{AY}{\hat{e}(C)}\right]$$ and $$E[Y(0)] \approx E_N\left[\frac{(1 - A)Y}{1 - \hat{e}(C)}\right]$$, respectively;
 5. Compute the difference to get IPW estimate of average treatment effect (ATE) $$E[Y(1)] - E[Y(0)]$$.
+
+
+Dataset
+------
+
+
+
+Discussion
+------
+
 
 
 Reference
