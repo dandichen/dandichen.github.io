@@ -102,12 +102,11 @@ It goes without saying that which variables are expected to be aggregated to the
 Estimation
 ------
 
-I use inverse probability weighting (IPW) for estimation. It contains following steps:
+I use inverse probability weighting (IPW) for estimation. It includes the following steps:
 1. Load data and remove missing values;
-2. Estimate propensity score $$\hat{e}(X)$$using logistic regression, by explaining treatment $$A$$ as a function of all patient characteristics $$X$$, which are actually observed characteristics $$C$$;
-3. Compute denominator for IPW weights;
-4. Compute IPW estimator for those with treatment = 1 and treatment = 0, respectively;
-5. Compute the difference to get IPW estimate of ATE.
+2. Fit a logistic regression model to explain the treatment $$A$$ as a function of all observed patient characteristics $$C$$. Then its predictions through this fitted logistic regression is the estimated propensity score $$\hat{e}(C)$$;
+4. Compute IPW estimators for those with $$A = 1$$ and $$A = 0$$ according to $$E[Y(1)] \approx E_N[\frac{AY}{\hat{e}(C)}]$$ and $$E[Y(0)] \approx E_N[\frac{(1 - A)Y}{1 - \hat{e}(C)}]$$, respectively;
+5. Compute the difference to get IPW estimate of average treatment effect (ATE) $$E[Y(1)] - E[Y(0)]$$.
 
 
 Reference
