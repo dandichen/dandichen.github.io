@@ -125,7 +125,7 @@ Discussion
 
 The IPW estimate of ATE is 0.044128 in this dataset. However, it can introduce bias if the estimation of propensity score is not perfect since $$E\left[E_N\left[\frac{1_{A = a}Y}{\hat{P}(A = a \mid X)}\right]\right] = E[Y(a)] + E\left[E[Y(a) \mid X]\frac{P(A = a \mid X)-\hat{P}(A = a \mid X)}{\hat{P}(A = a \mid X)}\right]$$.
 
-Therefore, I also tried augmented inverse probability weighting (AIPW) as it is doubly robust by combining IPW and outcome regression. The AIPW estimate of ATE is 0.047478, which is not much different from the IPW estimate. So we tend to conclude that telehealth leads to an increase in hospitalizations of about 0.044 to 0.047 within 30 days of the visit compared to in-person.
+Therefore, I also tried augmented inverse probability weighting (AIPW) as it is doubly robust by combining IPW and outcome regression. The AIPW estimate of ATE is 0.047478, which is not much different from the IPW estimate. So we tend to conclude that telehealth leads to an increase in hospitalizations of about 0.044 to 0.047 within 30 days of the visit compared to in-person given this dataset.
 
 As noted in class, both IPW and AIPW rely on observed variables to create propensity scores to balance between the treated and untreated groups. But unobserved variables may also affect the results, as described in the Hypotheses section. Then additional methods to address unmeasuresd confounding variables are expected for more accurate estimands. 
 
