@@ -112,8 +112,20 @@ I use inverse probability weighting (IPW) for estimation. It includes the follow
 Dataset
 ------
 
-This study focuses on non-COVID outpatient care in primary care settings among Medicare beneficiaries served by an Accountable Care Organization (ACO) in southern Wisconsin. 3941 patients are included in the dataset. For simplicity, only their first visit after April 1, 2020 is included, for a total of 2325 telehealth visits and 1616 in-person visits, acting as the assigned treatment. 
+This study focuses on non-COVID outpatient care in primary care settings among Medicare beneficiaries served by an Accountable Care Organization (ACO) in southern Wisconsin. 3941 patients are included in the dataset. For simplicity, only their first visit after April 1, 2020 is included, for a total of 2325 telehealth visits and 1616 in-person visits, acting as the assigned treatment. The number of hospitalizations within 30 days of this visit is counted as the outcome for each patient. 1375 patients did have follow-up hospitalizations within 30 days of the visit, while 1225 patients had more than two follow-up hospitalizations within 30 days.
 
+$$
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c}
+\hline
+outcome & telehealth & in-person & total \\ \hline
+0       & 610        & 765       & 1375  \\ \hline
+1       & 540        & 801       & 1341  \\ \hline
+total   & 1616       & 2325      & 3941  \\ \hline
+\end{tabular}
+\end{table}
+$$
 
 Discussion
 ------
