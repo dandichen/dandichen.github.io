@@ -123,6 +123,7 @@ Variables are exactly the same as described in the Model the Problem section.
 Discussion
 ------
 
+The IPW estimate of ATE is 
 
 
 Reference
