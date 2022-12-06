@@ -139,7 +139,19 @@ Sensitivity Analysis
 
 As described in the Discussion section above, only observed variables were considered when conducting IPW and AIPW, i.e., no unmeasured confounding variables were assumed. 
 
-Therefore, two alternative strategies were performed: controlling for the number of follow-up visits after the initial visit, and calculating the E-value. 
+Therefore, three alternative strategies were performed to take care of the unmeasured confounding: controlling for the number of follow-up visits after the initial visit, Manski bounds and calculating the E-value. 
+
+- **Control for the number of follow-up visits**
+
+
+![test image](images/propensity_score_table_sensitivity_analysis.png)
+
+- **Manski bounds**
+
+- **E-values**
+
+
+
 
 with30days_cnt: 
   - outcome range: 0, 10
