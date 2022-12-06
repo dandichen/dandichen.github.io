@@ -134,6 +134,20 @@ Therefore, I also tried augmented inverse probability weighting (AIPW) as it is 
 As noted in class, both IPW and AIPW rely on observed variables to create propensity scores to balance between the treated and untreated groups. But unobserved variables may also affect the results, as described in the Hypotheses section. Then additional methods to address unmeasuresd confounding variables are expected for more accurate estimands. 
 
 
+Sensitivity Analysis
+------
+
+As described in the Discussion section above, only observed variables were considered when conducting IPW and AIPW, i.e., no unmeasured confounding variables were assumed. 
+
+Therefore, two alternative strategies were performed: controlling for the number of follow-up visits after the initial visit, and calculating the E-value. 
+
+with30days_cnt: 
+  - outcome range: 0, 10
+  - Manski bounds: -5.8456, 4.1544
+  - additional motonicity assumption: Y(1) <= Y(0) and E[Y(a)|A = 1, X = x] <= E[Y(a)|A = 0, X = x] both make sense, as patients who use telehealth tend to be more heaithier than those use in-person services. Its lower bound with motonicity assumption is -0.020721, while IPW estimate is -0.1164, AIPW estimate is -0.10463, nearest neighbor propensity matching is -0.072519.
+  - E-value = 1.260 with RR = 0.958, 95% CI = (0.850, 1.079) 
+
+
 Reference
 ------
 
