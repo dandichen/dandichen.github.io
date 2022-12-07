@@ -164,9 +164,8 @@ Based on the proposition $$E[Y \mid A = 1, X] \leq E[Y \mid A = 0, X] \leq E[Y(1
 
 Another idea to consider the unmeasured confounding is the E-value. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow A$$ and $$U \rightarrow Y$$.
 
-
-
-  - E-value = 1.260 with RR = 0.958, 95% CI = (0.850, 1.079) 
+With the following $$2 \times 2$$ table, the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$)
+![test image](images/2by2_table.png) is 0.9576 with 95\% confidence interval (0.8500, 1.0787). Therefore, after taking the inverse of the relative risk and applying the formula, the computed E-value is 1.2596.
 
 
 Conclusions
