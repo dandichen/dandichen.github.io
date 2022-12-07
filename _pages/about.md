@@ -154,7 +154,7 @@ The following table summarizes the propensity scores after including the number 
 
 - **Manski bounds**
 
-In the presence of unmeasured confounding, i.e., unobserved characteristics $$U$$, Manski's approach [16] is able to provide a bound for the estimated ATE, as the outcome is bounded by 0 and 10 in the dataset. Using the measurable portion of the ATE, I was able to obtained the Manski bounds: -5.8456 and 4.1544. This provides a range of the causal estimand in the presence of unmeasured confounding. However, this bounds may be less informative, as previous estimates of ATE were around -0.1 to 0.5.
+In the presence of unmeasured confounding, i.e., unobserved patient characteristics $$U$$, Manski's approach [16] is able to provide a bound for the estimated ATE, as the outcome $$Y$$ is bounded by 0 and 10 in this dataset. Using the measurable portion of the ATE, I was able to obtained the Manski bounds: -5.8456 and 4.1544. This provides a range of the causal estimand in the presence of unmeasured confounding. However, this bounds may be less informative, as previous estimates of ATE were around -0.1 to 0.05.
 
 The good news is that it seems reasonable to narrow the above bounds with additional monotonicity assumptions. As the focus of this study is on the first visit after April 1, 2020, and the number of hospitalizations within 30 days of the visit, it sounds reasonable that healthier individuals would tend to choose telehealth visits, while those with severe conditions may have to choose in-person visits as some tests cannot be performed without a patient on site. In addition, healthier individuals are expected to experience less hospitalizations compared to those with severe conditions due to their health status. In other words, it is reasonable to assume individuals' number of hospitalizations would decrease if they choose telehealth visits compared to in-person visits, i.e., $$Y(1) \leq Y(0)$$. Furthermore, it is also reasonable to assume those who choose telehealth visits have fewer expected hospitalizations, regardless of their actual assigned treatment, i.e., $$E[Y(a) \mid A = 1, X = x] \leq E[Y(a) \mid A = 0, X = x]$$.  
 
@@ -162,7 +162,7 @@ Based on the proposition $$E[Y \mid A = 1, X] \leq E[Y \mid A = 0, X] \leq E[Y(1
 
 - **E-value**
 
-Another idea is the E-value, the minimum strength of the association on the relative risk scale that unmeasured confounding would explain away the observed treatment-outcome association. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, the E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow Y$$ and $$A \rightarrow U$$.
+Another idea is the E-value, the minimum strength of the association on the relative risk scale that unmeasured confounding would explain away the observed treatment-outcome association. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, the E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow Y$$ and $$U \rightarrow A$$.
 
 After dichotomizing the outcome $$Y$$ into a binary variable using the indicator function $$1_{Y \geq 0}$$, a $$2\times 2$$ table can be obtained as follows.
 ![test image](images/2by2_table.png) 
