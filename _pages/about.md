@@ -166,7 +166,7 @@ Another idea is the E-value, which provides the minimum strength of the associat
 
 After dichotomizing the outcome $$Y$$ into a binary variable using the indicator function $$1_{Y > 0}$$, a $$2\times 2$$ table can be obtained as follows.
 ![test image](images/2by2_table.png) 
-Then the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$) is 0.9576 with 95% confidence interval (0.8500, 1.0787) and p-value 0.48. Therefore, after taking the inverse of the relative risk (since it is protective) and applying the formula, the computed E-value is 1.2596 for the point estimate. However, the E-value for the confidence interval of the relative risk is 1 since the upper limit of the confidence interval is greater than 1. [18] 
+Therefore, the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$) is 0.9576 with 95% confidence interval (0.8500, 1.0787) and p-value 0.48. After taking the inverse of the relative risk (since it is protective) and applying the formula, the computed E-value is 1.2596 for the point estimate. However, the E-value for the confidence interval of the relative risk is 1 since the upper limit of the confidence interval is greater than 1. [18] 
 
 The E-value demonstrates that the unmeasured confounding increases the likelihood of the outcome by 1.2596, or the treatment increases the likelihood of the unmeasured confoundering by 1.2596, would explain away the observed relative risk of 0.9576 for the treatment-outcome association. Although this small E-value suggests weak evidence of causality, it describes how strong the umneasured confounding would relate to the observed treatment-outcome association.
 
