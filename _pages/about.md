@@ -164,8 +164,9 @@ Based on the proposition $$E[Y \mid A = 1, X] \leq E[Y \mid A = 0, X] \leq E[Y(1
 
 Another idea to consider the unmeasured confounding is the E-value. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow Y$$ and $$A \rightarrow U$$.
 
-With the following $$2 \times 2$$ table, the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$)
-![test image](images/2by2_table.png) is 0.9576 with 95% confidence interval (0.8500, 1.0787) and p-value 0.48. Therefore, after taking the inverse of the relative risk (since it is protective) and applying the formula, the computed E-value is 1.2596 for the point estimate, which means that the unmeasured confounding should increase the likelihood of the outcome by a factor of 1.2596, or the treatment should change the likelihood of the unmeasured confoundering by a factor of 1.2596, to account for the observed relative risk of 0.9576 between the groups assigned with $$A = 1$$ and $$A = 0$$. This describes the magnitude of the potential changes while unmeasured confounding exists. 
+After dichotomizing the outcome $$Y$$ into a binary variable using the indicator function $$1_{Y \geq 0}$$, a $$2\times 2$$ table can be obtained as follows.
+![test image](images/2by2_table.png) 
+Then the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$) is 0.9576 with 95% confidence interval (0.8500, 1.0787) and p-value 0.48. Therefore, after taking the inverse of the relative risk (since it is protective) and applying the formula, the computed E-value is 1.2596 for the point estimate, which means that the unmeasured confounding should increase the likelihood of the outcome by a factor of 1.2596, or the treatment should change the likelihood of the unmeasured confoundering by a factor of 1.2596, to account for the observed relative risk of 0.9576 between the groups assigned with $$A = 1$$ and $$A = 0$$. This describes the magnitude of the potential changes while unmeasured confounding exists. 
 
 
 Conclusions
