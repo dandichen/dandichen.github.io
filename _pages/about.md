@@ -162,15 +162,13 @@ Based on the proposition $$E[Y \mid A = 1, X] \leq E[Y \mid A = 0, X] \leq E[Y(1
 
 - **E-value**
 
-Another idea to consider the unmeasured confounding is the E-value. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow Y$$ and $$A \rightarrow U$$.
+Another idea is the E-value, the minimum strength of the association on the relative risk scale that unmeasured confounding would explain away the observed treatment-outcome association. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, the E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow Y$$ and $$A \rightarrow U$$.
 
 After dichotomizing the outcome $$Y$$ into a binary variable using the indicator function $$1_{Y \geq 0}$$, a $$2\times 2$$ table can be obtained as follows.
 ![test image](images/2by2_table.png) 
-Then the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$) is 0.9576 with 95% confidence interval (0.8500, 1.0787) and p-value 0.48. Therefore, after taking the inverse of the relative risk (since it is protective) and applying the formula, the computed E-value is 1.2596 for the point estimate, which means that the unmeasured confounding should increase the likelihood of the outcome by a factor of 1.2596, or the treatment should change the likelihood of the unmeasured confoundering by a factor of 1.2596, to account for the observed relative risk of 0.9576 between the groups assigned with $$A = 1$$ and $$A = 0$$. This describes the magnitude of the potential changes while unmeasured confounding exists. 
+Then the relative risk for the exposed group ($$A = 1$$) and the unexposed group ($$A = 0$$) is 0.9576 with 95% confidence interval (0.8500, 1.0787) and p-value 0.48. Therefore, after taking the inverse of the relative risk (since it is protective) and applying the formula, the computed E-value is 1.2596 for the point estimate. However, the E-value for the confidence interval of the relative risk is 1 since the upper limit of the confidence interval is greater than 1. [18] 
 
-
-Conclusions
-------
+The E-value demonstrates that the unmeasured confounding increases the likelihood of the outcome by 1.2596, or the treatment increases the likelihood of the unmeasured confoundering by 1.2596, would explain away the observed relative risk of 0.9576 for the treatment-outcome association. Although this small E-value suggests weak evidence of causality, it describes how strong the umneasured confounding would relate to the observed treatment-outcome association.
 
 
 Reference
@@ -210,6 +208,4 @@ Reference
 
 [17] Ding, Peng, and Tyler J. VanderWeele. "Sensitivity analysis without assumptions." Epidemiology (Cambridge, Mass.) 27, no. 3 (2016): 368.
 
-
-Appendix
-------
+[18] VanderWeele, Tyler J., and Peng Ding. "Sensitivity analysis in observational research: introducing the E-value." Annals of internal medicine 167, no. 4 (2017): 268-274.
