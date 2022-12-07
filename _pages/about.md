@@ -139,11 +139,11 @@ Unmeasured Confounding
 
 As described in the Discussion section above, only observed variables were considered when conducting IPW and AIPW, i.e., no unmeasured confounding variables were assumed. 
 
-Therefore, three alternative strategies were performed to take care of the unmeasured confounding: controlling for the number of follow-up visits after the initial visit, Manski bounds and calculating the E-value. 
+Therefore, three alternative strategies were performed to take care of the unmeasured confounding: controlling for an additional variable (number of follow-up visits after the initial visit), Manski bounds and the E-value. 
 
 - **Control for an additional variable**
 
-The number of follow-up visits after the first visit varies from patient to patient, ranging from 0 to 75 visits, as shown in the histogram below.
+The number of follow-up visits after the initial visit (first visit after April 1st, 2020) varies from patient to patient, ranging from 0 to 75 visits, as shown in the histogram below.
 ![test image](images/follow_up_visit_cnt.png)
 Therefore, I would like to treat this additional variable as a proxy variable for patients' unmeasured health status. 
 
