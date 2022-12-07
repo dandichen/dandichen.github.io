@@ -145,7 +145,11 @@ Therefore, three alternative strategies were performed to take care of the unmea
 
 The number of follow-up visits after the first visit varies from patient to patient, ranging from 0 to 75 visits, as shown in the histogram below.
 ![test image](images/follow_up_visit_cnt.png)
+Therefore, I would like to treat this additional variable as a proxy variable for patients' unmeasured health status. 
 
+Repeating the IPW and AIPW estimates, coding age and geographic residence as categorical variables instead, the estimated ATEs become negative: -0.1164 for IPW and -0.10463 for AIPW, indicating that telehealth tends to lead a decrease in hospitalizations of about 0.10463 to 0.1164 within 30 days of the visit compared to in-person in this data.
+
+The following table summarizes the corresponding propensity scores.
 ![test image](images/propensity_score_table_sensitivity_analysis.png)
 
 - **Manski bounds**
