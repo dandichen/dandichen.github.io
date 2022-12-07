@@ -141,7 +141,7 @@ As described in the Discussion section above, only observed variables were consi
 
 Therefore, three alternative strategies were performed to take care of the unmeasured confounding: controlling for the number of follow-up visits after the initial visit, Manski bounds and calculating the E-value. 
 
-- **Control for the number of follow-up visits**
+- **Control for an additional variable**
 
 The number of follow-up visits after the first visit varies from patient to patient, ranging from 0 to 75 visits, as shown in the histogram below.
 ![test image](images/follow_up_visit_cnt.png)
@@ -155,6 +155,8 @@ The following table summarizes the corresponding propensity scores.
 - **Manski bounds**
 
 In the presence of unmeasured confounding, i.e., unobserved characteristics $$U$$, Manski's approach is able to provide a bound for the estimated ATE, as the outcome is bounded by 0 and 10 in the dataset. Using the measurable portion of the ATE, I was able to obtained the Manski bounds: -5.8456 and 4.1544. However, this bounds may be less informative, as previous estimates of ATE were around -0.1 to 0.5.
+
+The good news is that it seems reasonable to narrow the above bounds with additional monotonicity assumptions. As the focus of this study is on the first visit after April 1, 2020, and the number of hospitalizations within 30 days of the visit, it sounds reasonable that healthier individuals would tend to choose telehealth visits, while those with severe conditions may have to choose in-person visits as some tests cannot be performed without a patient on site. In addition, healthier individuals are expected to experience less hospitalizations compared to those with severe conditions due to their health status. In other words, it is reasonable to assume individuals' number of hospitalizations would decrease if they choose telehealth visits compared to in-person visits, i.e., $$E[Y(1)] <= E[Y(0)]$$.
 
 
 
