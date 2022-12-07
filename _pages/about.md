@@ -143,6 +143,8 @@ Therefore, three alternative strategies were performed to take care of the unmea
 
 - **Control for the number of follow-up visits**
 
+The number of follow-up visits after the first visit varies from patient to patient, ranging from 0 to 75 visits, as shown in the histogram below.
+![test image](images/follow_up_visit_cnt.png)
 
 ![test image](images/propensity_score_table_sensitivity_analysis.png)
 
