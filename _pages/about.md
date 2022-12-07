@@ -158,18 +158,19 @@ In the presence of unmeasured confounding, i.e., unobserved characteristics $$U$
 
 The good news is that it seems reasonable to narrow the above bounds with additional monotonicity assumptions. As the focus of this study is on the first visit after April 1, 2020, and the number of hospitalizations within 30 days of the visit, it sounds reasonable that healthier individuals would tend to choose telehealth visits, while those with severe conditions may have to choose in-person visits as some tests cannot be performed without a patient on site. In addition, healthier individuals are expected to experience less hospitalizations compared to those with severe conditions due to their health status. In other words, it is reasonable to assume individuals' number of hospitalizations would decrease if they choose telehealth visits compared to in-person visits, i.e., $$Y(1) \leq Y(0)$$. Furthermore, it is also reasonable to assume those who choose telehealth visits have fewer expected hospitalizations, regardless of their actual assigned treatment, i.e., $$E[Y(a) \mid A = 1, X = x] \leq E[Y(a) \mid A = 0, X = x]$$.  
 
-According to the proposition $$E[Y \mid A = 1, X] \leq E[Y \mid A = 0, X] \leq E[Y(1) - Y(0) \mid X] \leq 0$$, I was able to computed the Manski bounds with motonicity assumption. Its lower bound becomes -0.020721, which is much closer to the estimated ATEs using IPW and AIPW. However, it appears impossible to check whether individual treatment responses are monotonic.
+Based on the proposition $$E[Y \mid A = 1, X] \leq E[Y \mid A = 0, X] \leq E[Y(1) - Y(0) \mid X] \leq 0$$ (please see the appendix for its proof), I was able to computed the Manski bounds with the motonicity assumption. Its lower bound becomes -0.020721, which is much closer to the ATE estimated using IPW and AIPW. However, it appears impossible to check whether individual treatment responses are monotonic. The dependence on this untestable assumption is a limitation of this project.
 
-- **E-values**
+- **E-value**
+
+Another idea to consider the unmeasured confounding is the E-value. [17] Calculated directly from the observed relative risk between the treatment $$A$$ and the outcome $$Y$$, E-value quantifies how the unmeasured confounding can bias the treatment or the outcome while taking into account the associations of $$U \rightarrow A$$ and $$U \rightarrow Y$$.
 
 
 
-
-with30days_cnt: 
-  - outcome range: 0, 10
-  - Manski bounds: -5.8456, 4.1544
-  - additional motonicity assumption: Y(1) <= Y(0) and  both make sense, as patients who use telehealth tend to be more heaithier than those use in-person services. Its lower bound with motonicity assumption is -0.020721, while IPW estimate is -0.1164, AIPW estimate is -0.10463, nearest neighbor propensity matching is -0.072519.
   - E-value = 1.260 with RR = 0.958, 95% CI = (0.850, 1.079) 
+
+
+Conclusions
+------
 
 
 Reference
@@ -206,3 +207,9 @@ Reference
 [15] Smith, Maureen A., Mary S. Vaughan-Sarrazin, Menggang Yu, Xinyi Wang, Peter A. Nordby, Christine Vogeli, Jonathan Jaffery, and Joshua P. Metlay. "The importance of health insurance claims data in creating learning health systems: evaluating care for high-need high-cost patients using the National Patient-Centered Clinical Research Network (PCORNet)." Journal of the American Medical Informatics Association 26, no. 11 (2019): 1305-1313.
 
 [16] Manski, Charles F. "Nonparametric bounds on treatment effects." The American Economic Review 80, no. 2 (1990): 319-323.
+
+[17] Ding, Peng, and Tyler J. VanderWeele. "Sensitivity analysis without assumptions." Epidemiology (Cambridge, Mass.) 27, no. 3 (2016): 368.
+
+
+Appendix
+------
