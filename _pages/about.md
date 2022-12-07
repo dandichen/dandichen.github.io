@@ -134,7 +134,7 @@ Therefore, I also tried augmented inverse probability weighting (AIPW) as it is 
 As noted in class, both IPW and AIPW rely on observed variables to create propensity scores to balance between the treated and untreated groups. But unobserved variables may also affect the results, as described in the Hypotheses section. Then additional methods to address unmeasuresd confounding variables are expected for more accurate estimands. 
 
 
-Sensitivity Analysis
+Unmeasured Confounding
 ------
 
 As described in the Discussion section above, only observed variables were considered when conducting IPW and AIPW, i.e., no unmeasured confounding variables were assumed. 
@@ -153,6 +153,10 @@ The following table summarizes the corresponding propensity scores.
 ![test image](images/propensity_score_table_sensitivity_analysis.png)
 
 - **Manski bounds**
+
+In the presence of unmeasured confounding, i.e., unobserved characteristics $$U$$, Manski's approach is able to provide a bound for the estimated ATE, as the outcome is bounded by 0 and 10 in the dataset. Using the measurable portion of the ATE, I was able to obtained the Manski bounds: -5.8456 and 4.1544. However, this bounds may be less informative, as previous estimates of ATE were around -0.1 to 0.5.
+
+
 
 - **E-values**
 
