@@ -143,13 +143,13 @@ Therefore, three alternative strategies were performed to take care of the unmea
 
 - **Control for an additional variable**
 
-The number of follow-up visits after the initial visit (first visit after April 1st, 2020) varies from patient to patient, ranging from 0 to 75 visits, as shown in the histogram below.
+The number of follow-up visits after the initial visit (first visit after April 1st, 2020) varies from patient to patient, ranging from 0 to 75, as shown in the histogram below.
 ![test image](images/follow_up_visit_cnt.png)
-Therefore, I would like to treat this additional variable as a proxy variable for patients' unmeasured health status. 
+Therefore, I treated this additional variable as a proxy variable for patients' unmeasured health status. 
 
-Repeating the IPW and AIPW estimates, coding age and geographical residence as categorical variables instead, the estimated ATEs become negative: -0.1164 for IPW and -0.10463 for AIPW, indicating that telehealth tends to lead a decrease in hospitalizations of about 0.10463 to 0.1164 within 30 days of the visit compared to in-person in this data. Without considering unmeasured confounders, the conclusion is opposite as mentioned in the Discussion section, suggesting that telehealth tends to increase the number of hospitalizations within 30 days of the visit, since the estimated ATE is about 0.044 to 0.047. Then it seems that the conclusion is sensitive to the violation of the assumption that there are no unmeasured confounders.
+Repeating the IPW and AIPW estimates, coding age and geographical residence as categorical variables instead, the estimated ATEs became negative: -0.1164 for IPW and -0.10463 for AIPW, indicating that telehealth tends to lead a decrease in hospitalizations of about 0.10463 to 0.1164 within 30 days of the visit compared to in-person in this data. The conclusion is reversed when unmeasured confounders are not considered, as previous findings suggest that telehealth tends to increase the number of hospitalizations within 30 days of a visit, since the estimated ATE was about 0.044 to 0.047. Then it seems that the conclusion is sensitive to the violation of the assumption that there are no unmeasured confounders.
 
-The following table summarizes the corresponding propensity scores.
+The following table summarizes the propensity scores after including the number of follow-up visits after the initial visit in the IPW and AIPW estimates.
 ![test image](images/propensity_score_table_sensitivity_analysis.png)
 
 - **Manski bounds**
