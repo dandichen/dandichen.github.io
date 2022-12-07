@@ -147,17 +147,18 @@ The number of follow-up visits after the first visit varies from patient to pati
 ![test image](images/follow_up_visit_cnt.png)
 Therefore, I would like to treat this additional variable as a proxy variable for patients' unmeasured health status. 
 
-Repeating the IPW and AIPW estimates, coding age and geographic residence as categorical variables instead, the estimated ATEs become negative: -0.1164 for IPW and -0.10463 for AIPW, indicating that telehealth tends to lead a decrease in hospitalizations of about 0.10463 to 0.1164 within 30 days of the visit compared to in-person in this data.
+Repeating the IPW and AIPW estimates, coding age and geographical residence as categorical variables instead, the estimated ATEs become negative: -0.1164 for IPW and -0.10463 for AIPW, indicating that telehealth tends to lead a decrease in hospitalizations of about 0.10463 to 0.1164 within 30 days of the visit compared to in-person in this data.
 
 The following table summarizes the corresponding propensity scores.
 ![test image](images/propensity_score_table_sensitivity_analysis.png)
 
 - **Manski bounds**
 
-In the presence of unmeasured confounding, i.e., unobserved characteristics $$U$$, Manski's approach is able to provide a bound for the estimated ATE, as the outcome is bounded by 0 and 10 in the dataset. Using the measurable portion of the ATE, I was able to obtained the Manski bounds: -5.8456 and 4.1544. However, this bounds may be less informative, as previous estimates of ATE were around -0.1 to 0.5.
+In the presence of unmeasured confounding, i.e., unobserved characteristics $$U$$, Manski's approach [16] is able to provide a bound for the estimated ATE, as the outcome is bounded by 0 and 10 in the dataset. Using the measurable portion of the ATE, I was able to obtained the Manski bounds: -5.8456 and 4.1544. However, this bounds may be less informative, as previous estimates of ATE were around -0.1 to 0.5.
 
-The good news is that it seems reasonable to narrow the above bounds with additional monotonicity assumptions. As the focus of this study is on the first visit after April 1, 2020, and the number of hospitalizations within 30 days of the visit, it sounds reasonable that healthier individuals would tend to choose telehealth visits, while those with severe conditions may have to choose in-person visits as some tests cannot be performed without a patient on site. In addition, healthier individuals are expected to experience less hospitalizations compared to those with severe conditions due to their health status. In other words, it is reasonable to assume individuals' number of hospitalizations would decrease if they choose telehealth visits compared to in-person visits, i.e., $$E[Y(1)] <= E[Y(0)]$$.
+The good news is that it seems reasonable to narrow the above bounds with additional monotonicity assumptions. As the focus of this study is on the first visit after April 1, 2020, and the number of hospitalizations within 30 days of the visit, it sounds reasonable that healthier individuals would tend to choose telehealth visits, while those with severe conditions may have to choose in-person visits as some tests cannot be performed without a patient on site. In addition, healthier individuals are expected to experience less hospitalizations compared to those with severe conditions due to their health status. In other words, it is reasonable to assume individuals' number of hospitalizations would decrease if they choose telehealth visits compared to in-person visits, i.e., $$Y(1) \leq Y(0)$$.
 
+Furthermore, it is also reasonable to assume those who choose telehealth visits have fewer expected hospitalizations, regardless of their actual assigned treatment, i.e., $$E[Y(a) \mid A = 1, X = x] \leq E[Y(a) \mid A = 0, X = x]$$ for 
 
 
 - **E-values**
@@ -168,7 +169,7 @@ The good news is that it seems reasonable to narrow the above bounds with additi
 with30days_cnt: 
   - outcome range: 0, 10
   - Manski bounds: -5.8456, 4.1544
-  - additional motonicity assumption: Y(1) <= Y(0) and E[Y(a)|A = 1, X = x] <= E[Y(a)|A = 0, X = x] both make sense, as patients who use telehealth tend to be more heaithier than those use in-person services. Its lower bound with motonicity assumption is -0.020721, while IPW estimate is -0.1164, AIPW estimate is -0.10463, nearest neighbor propensity matching is -0.072519.
+  - additional motonicity assumption: Y(1) <= Y(0) and  both make sense, as patients who use telehealth tend to be more heaithier than those use in-person services. Its lower bound with motonicity assumption is -0.020721, while IPW estimate is -0.1164, AIPW estimate is -0.10463, nearest neighbor propensity matching is -0.072519.
   - E-value = 1.260 with RR = 0.958, 95% CI = (0.850, 1.079) 
 
 
@@ -204,3 +205,5 @@ Reference
 [14] Mueller, J. Tom, Kathryn McConnell, Paul Berne Burow, Katie Pofahl, Alexis A. Merdjanoff, and Justin Farrell. "Impacts of the COVID-19 pandemic on rural America." Proceedings of the National Academy of Sciences 118, no. 1 (2021): 2019378118.
 
 [15] Smith, Maureen A., Mary S. Vaughan-Sarrazin, Menggang Yu, Xinyi Wang, Peter A. Nordby, Christine Vogeli, Jonathan Jaffery, and Joshua P. Metlay. "The importance of health insurance claims data in creating learning health systems: evaluating care for high-need high-cost patients using the National Patient-Centered Clinical Research Network (PCORNet)." Journal of the American Medical Informatics Association 26, no. 11 (2019): 1305-1313.
+
+[16] Manski, Charles F. "Nonparametric bounds on treatment effects." The American Economic Review 80, no. 2 (1990): 319-323.
