@@ -171,6 +171,13 @@ Therefore, the relative risk for the exposed group ($$A = 1$$) and the unexposed
 The E-value demonstrates that the unmeasured confounding increases the likelihood of the outcome by 1.2596, or the treatment increases the likelihood of the unmeasured confoundering by 1.2596, would explain away the observed relative risk of 0.9576 for the treatment-outcome association. Although this small E-value suggests weak evidence of causality, it describes how strong the umneasured confounding would relate to the observed treatment-outcome association.
 
 
+Conclusion
+------
+In this project, I explored whether people who opted for telehealth tended to have fewer hospitalizations within 30 days of their visits compared to those who opted for in-person visits. The results showed that telehealth tended to reduce hospitalizations by approximately 0.1 after adjusting for patient characteristics, health conditions at baseline, and number of follow-up visits after the initial visit. In addition, there was weak evidence of a causal relationship between choice of telehealth or in-person visits and the number of hospitalizations, with an E-value = 1.2596. Unfortunately, I was unable to test the monotonicity assumption to narrow the bounds of unmeasured confounding.
+
+The focus of this work was on first visits after April 1, 2020 and its follow-up hospitalizations. However, due to the pandemic, especially for this early stage of COVID-19, there may be some missed or delayed care, resulting in inaccurate or even biased data. The visit and subsequent hospitalization may also not have been caused by a relevant etiology, making the causal relationship between the two inherently weak.
+
+
 Reference
 ------
 
