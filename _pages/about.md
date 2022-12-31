@@ -28,7 +28,7 @@ This formally raises the question: compared to in-person visits, are telehealth 
 Model the Problem
 ------
 
-In order to simplify the problem, three random variables are defined for each individual in this study.
+In order to simplify the problem, three random variables are defined for each individual in the study.
 - Treatment assignment $$A \in \{0, 1\}$$, where $$A = 1$$ indicates telehealth visits and $$A = 0$$ indicates in-person visits. Each individual is assumed to choose telehealth or in-person services independent of the choice of others.
 - Outcome $$Y \in N^0$$, a non-negative integer, indicating the number of hospitalizations within 30 days of the visit.
 - Patient characteristics $$X \in R^d$$, a $$d$$ real-valued vector, including patient sociodemographics and health conditions at baseline. 
